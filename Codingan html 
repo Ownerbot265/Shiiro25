@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiiro Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="#" class="logo">SHIIRO<span>.</span></a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#akun">Akun Game</a>
+        <a href="#topup">Top Up</a>
+        <a href="#jual">Jual Akun</a>
+    </nav>
+
+    <button class="login-btn" onclick="loginGoogle()">
+        G Login Google
+    </button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="tag">WELCOME TO SHIIRO STORE</span>
+
+        <h1>
+            Find Your Best<br>
+            <span>Gaming Account.</span>
+        </h1>
+
+        <p>
+            Temukan akun game impianmu dan nikmati
+            layanan top up dengan mudah di Shiiro Store.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#akun" class="btn-primary">Explore Store</a>
+            <a href="#topup" class="btn-secondary">Top Up Now</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="circle"></div>
+        <div class="hero-logo">S</div>
+        <div class="floating-card">✦ SHIIRO STORE</div>
+    </div>
+</section>
+
+<section class="stats">
+    <div><h2>01</h2><p>Pilih Produk</p></div>
+    <div><h2>02</h2><p>Hubungi Admin</p></div>
+    <div><h2>03</h2><p>Konfirmasi Pesanan</p></div>
+</section>
+
+<!-- AKUN GAME -->
+<section class="section" id="akun">
+    <div class="section-title">
+        <span>MARKETPLACE</span>
+        <h2>Akun Game</h2>
+        <p>Temukan akun game favoritmu.</p>
+    </div>
+
+    <input
+        type="search"
+        id="search"
+        placeholder="Cari akun game..."
+        oninput="searchProduct()"
+    >
+
+    <div class="products" id="product-list">
+
+        <div class="product">
+            <div class="product-img ml">ML</div>
+            <h3>Mobile Legends</h3>
+            <p>Akun ML banyak skin</p>
+            <h4>Rp150.000</h4>
+            <button onclick="buy('Akun Mobile Legends')">Beli Sekarang</button>
+        </div>
+
+        <div class="product">
+            <div class="product-img gi">GI</div>
+            <h3>Genshin Impact</h3>
+            <p>Akun starter Asia</p>
+            <h4>Rp85.000</h4>
+            <button onclick="buy('Akun Genshin Impact')">Beli Sekarang</button>
+        </div>
+
+        <div class="product">
+            <div class="product-img hsr">HSR</div>
+            <h3>Honkai Star Rail</h3>
+            <p>Akun mid game</p>
+            <h4>Rp120.000</h4>
+            <button onclick="buy('Akun Honkai Star Rail')">Beli Sekarang</button>
+        </div>
+
+        <div class="product">
+            <div class="product-img roblox">RBX</div>
+            <h3>Roblox</h3>
+            <p>Akun Roblox starter</p>
+            <h4>Rp35.000</h4>
+            <button onclick="buy('Akun Roblox')">Beli Sekarang</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- FORM JUAL AKUN -->
+<section class="sell-section" id="jual">
+    <div class="section-title">
+        <span>SELL YOUR ACCOUNT</span>
+        <h2>Jual Akun Game</h2>
+        <p>Pasang akun game milikmu di Shiiro Store.</p>
+    </div>
+
+    <form id="sellForm">
+        <input type="text" id="namaAkun"
+            placeholder="Nama akun / judul produk" required>
+
+        <select id="game">
+            <option>Mobile Legends</option>
+            <option>Genshin Impact</option>
+            <option>Honkai Star Rail</option>
+            <option>Roblox</option>
+            <option>Game Lainnya</option>
+        </select>
+
+        <input type="number" id="harga"
+            placeholder="Harga akun (Rp)" min="1000" required>
+
+        <textarea id="deskripsi"
+            placeholder="Deskripsi akun..." required></textarea>
+
+        <button type="submit">+ Posting Akun</button>
+    </form>
+</section>
+
+<!-- TOP UP -->
+<section class="section" id="topup">
+    <div class="section-title">
+        <span>DIAMOND SERVICE</span>
+        <h2>Top Up Diamond</h2>
+        <p>Pilih paket diamond yang kamu inginkan.</p>
+    </div>
+
+    <div class="products">
+
+        <div class="product">
+            <div class="diamond">◆</div>
+            <h3>86 Diamonds</h3>
+            <p>Mobile Legends</p>
+            <h4>Rp20.000</h4>
+            <button onclick="buy('86 Diamonds ML - Rp20.000')">Pilih</button>
+        </div>
+
+        <div class="product">
+            <div class="diamond">◆</div>
+            <h3>172 Diamonds</h3>
+            <p>Mobile Legends</p>
+            <h4>Rp39.000</h4>
+            <button onclick="buy('172 Diamonds ML - Rp39.000')">Pilih</button>
+        </div>
+
+        <div class="product">
+            <div class="diamond">◆</div>
+            <h3>257 Diamonds</h3>
+            <p>Mobile Legends</p>
+            <h4>Rp58.000</h4>
+            <button onclick="buy('257 Diamonds ML - Rp58.000')">Pilih</button>
+        </div>
+
+        <div class="product">
+            <div class="diamond">◆</div>
+            <h3>344 Diamonds</h3>
+            <p>Mobile Legends</p>
+            <h4>Rp77.000</h4>
+            <button onclick="buy('344 Diamonds ML - Rp77.000')">Pilih</button>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <h2>SHIIRO<span>.</span></h2>
+    <p>© 2026 Shiiro Store. All Rights Reserved.</p>
+    <p>Play Smart. Shop Safe.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
